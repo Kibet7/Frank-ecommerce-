@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our wide selection of products available in our store. Find detailed information about each item and view multiple images to help you make informed decisions.">
+  <meta name="author" content="Frankline Kibet">
+  <meta property="og:title" content="Inventory - Store Management System">
+  <meta property="og:description" content="Browse our wide selection of products available in our store. Find detailed information about each item and view multiple images to help you make informed decisions.">
+  <meta property="og:image" content="link-to-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/inventory.html">
+  <title>Inventory - Store Management System</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Store Management System</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </nav>
+      <button id="viewCartBtn" class="btn-cart">
+        <i class="fas fa-shopping-cart"></i> Cart
+        <span id="cartItemCount" class="cart-item-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="inventory">
+      <div class="container">
+        <h2>Our Inventory</h2>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search products...">
+          <button id="searchBtn">Search</button>
+        </div>
+        <div class="filters">
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Home">Home</option>
+            <!-- Add more categories here -->
+          </select>
+          <select id="priceFilter">
+            <option value="">All Prices</option>
+            <option value="0-25">Under $25</option>
+            <option value="25-50">$25 to $50</option>
+            <option value="50-100">$50 to $100</option>
+            <option value="100+">Over $100</option>
+          </select>
+          <select id="sortOptions">
+            <option value="">Sort By</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+            <option value="name-desc">Name: Z-A</option>
+          </select>
+        </div>
+        <div class="product-list">
+        
+
+          <!-- Add more products here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Store Management System. All rights reserved.</p>
+      <p><a href="about.html" target="_blank">&lt;&lt;&lt; Kibet Frank &gt;&gt;&gt;</a></p>
+      <p><a href="#">Back to Top</a></p>
+    </div>
+  </footer>
+
+ <!-- Cart Modal -->
+<div class="cart-modal" id="cartModal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeCartModal">&times;</button>
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart Items will be dynamically added here -->
+    </div>
+    <div class="cart-summary">
+      <span>Total:</span>
+      <span class="total" id="cartTotal">$0.00</span>
+    </div>
+    <div class="cart-buttons">
+      <button id="checkoutBtn">Checkout</button>
+      <button class="close-btn" id="closeCartModal">Close</button>
+    </div>
+  </div>
+</div>
+<!-- Product Details Modal -->
+  <div class="product-details-modal" id="productDetailsModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeProductDetailsModal">&times;</button>
+      <h2 id="productTitle">Product Title</h2>
+      <div class="product-details">
+        <div class="product-images">
+          <img id="productMainImage" src="" alt="Product Image">
+          <!-- Additional images can be added here -->
+        </div>
+        <div class="product-info">
+          <p id="productDescription">Product Description</p>
+          <p class="price" id="productPrice">$0.00</p>
+          <button class="btn-add-to-cart-details">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toastr CSS for notifications -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <!-- Toastr JS for notifications -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
